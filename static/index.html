@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Marijuana in Colorado</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <!-- js fiddle -->
+  <script async src="//jsfiddle.net/zuupzpLL/embed/"></script>
+</head>
+
+<body>
+  <div class="jumbotron">
+    <h1 class="display-3">Marijuana in Denver</h1>
+    <h1 class="lead">Economic and Safety Consequences</h1>
+    <hr class="my-2">
+    <p class="jumbo-text">Visualizing both the economic and safefy consequences of marijuana legalization in the Denver
+      Metro area and in Colorado more broadly.
+    </p>
+    <!-- <p class="lead">
+            <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
+        </p> -->
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-header">Denver Marijuana Crime</h5>
+            <br>
+            <form>
+              <div class="radio-option">
+                <label><input type="checkbox" name="business_checkbox" checked> Marijuana Business Map</label>
+              </div>
+              <div class="radio-option">
+                <label><input type="checkbox" name="crime_checkbox" checked> Marijuana Crime Heat Map</label>
+              </div>
+            </form>
+            <hr>
+            <p>The crimes displayed here were either committed by a person in possession of marijuana or were 
+              perpetrated on a marijuana business.
+            </p>
+            <p>Crimes that are initially reported, but that are later determined not to have occurred, are called 
+              "unfounded" offenses. These incidents are excluded once they have been designated as unfounded.
+            </p>
+          </div>
+        </div>
+        
+      </div>
+      <div class="col-md-9">
+        <div class="card">
+          <div class="card-body">
+            <!-- The div that holds our map -->
+            <div id="map-id"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class="col-md-6">
+          <div class="card">
+              <div class="card-body">
+                  <!-- <h5 class="card-header">CO Marijuana Tax</h5> -->
+                  <!-- <br> -->
+                <div id="tax-bar"></div>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-6">
+          <div class="card">
+              <div class="card-body">
+                <h5 class="card-header">Colorado Crime Data Compared</h5>
+                <!-- Visualizations Here -->
+                <div id="canvas-holder" style="width:100%">
+                    <canvas id="chart-area" width="500" height="500">
+                </div>               
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- D3 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+  <!-- Plotly -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- Marker Cluster JS & CSS -->
+  <script type="text/javascript"
+    src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+  <!-- js fiddle chart -->
+  <script src="https://rawgit.com/nnnick/Chart.js/2.0.0-alpha3/Chart.js"></script>
+  <!-- API Key -->
+  <script type="text/javascript" src="./config.js"></script>
+  <!-- Our JavaScript -->
+  <script type="text/javascript" src="./logic.js"></script>
+  <script type="text/javascript" src="./tax_bar.js"></script>
+  <script src="./crime_fiddle.js"></script>
+  <!-- Leaflet heatmap plugin-->
+  <script type="text/javascript" src="./leaflet-heat.js"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

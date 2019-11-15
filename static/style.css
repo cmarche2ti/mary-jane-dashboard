@@ -1,0 +1,44 @@
+.jumbotron {
+    background-image: url("./images/denver-skyline-sunset.jpeg");
+    background-size: cover;
+    height: 100%
+}
+
+.lead {
+    color: blue;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.jumbo-text {
+    color: white;
+    font-size: 18px;
+}
+
+#map-id {
+    height:600px;
+    width:100%;
+    overflow:hidden;
+    display:block;
+}
+
+.radio-option {
+    text-indent: 10px
+}
+
+#tax-bar {
+    width:100%
+}
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1.5px;
+  } 
+
+.card-header {
+    text-align: center
+}
