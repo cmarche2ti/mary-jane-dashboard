@@ -8,4 +8,3 @@ Marijuana legalization in Colordo has had many important consequences both good 
 counties have had a moritorium on the sale of marijuana while others have embraced Marijuana as a revenue source.  This dashboard seeks to quantify the economic and social impacts of legalization. 
 
 ![Dashboard Image](/MaryJane-Preview.png)
-Format: ![Alt Text](url)
