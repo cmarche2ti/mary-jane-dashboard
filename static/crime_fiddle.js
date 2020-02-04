@@ -1,4 +1,4 @@
-
+// Create fiddle graph to show marijuana crime as a percentage of total crime
 var config = {
     type: 'doughnut',
     data: {
