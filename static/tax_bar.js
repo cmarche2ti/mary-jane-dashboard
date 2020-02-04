@@ -1,6 +1,9 @@
+
+// Originally data came from arrays below
 // var year = ['2016', '2017', '2018']
 // var tax_amount = ['67470424','112313022','163734100']
 
+// Updated code below to take data from the route /taxes
 d3.json('/taxes', function (taxes_data) {
   
   var year = taxes_data.map(_=>_.year)
