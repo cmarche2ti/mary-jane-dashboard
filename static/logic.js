@@ -1,12 +1,12 @@
 
-// import data
+// import data from csv files
 var crimeCSV = "data/mj_crime_clean.csv"
 var businessLocations = "data/marijuana_businesses.csv"
 var mj_taxes_2018 = "data/ALL_MJ_Tax_Data.csv"
 
 // Initialize map object
 var myMap = L.map("map-id", {
-    center: [39.739890,-104.969698],
+    center: [39.739890,-104.969698], //Centers map on Denver
     zoom: 12
   });
 
@@ -18,7 +18,7 @@ var myMap = L.map("map-id", {
     accessToken: API_KEY
   }).addTo(myMap);
 
-// Marijuana businesses Using Marker Clusters
+// Pin Marijuana businesses on map Using Marker Clusters
   window.denverBusinessLocationsLayer;
   d3.csv(businessLocations, function(response) {
     // Create a new marker cluster group
@@ -26,7 +26,7 @@ var myMap = L.map("map-id", {
       zoomToBoundsOnClick: true
     });
   
-    // Loop through data to creat markers for each business listed
+    // Loop through data to create markers for each business listed
     for (var i = 0; i < response.length; i++) {
       var busiLat = +response[i].latitude
       var busiLon = +response[i].longitude
@@ -37,7 +37,8 @@ var myMap = L.map("map-id", {
         trade_name = "Not Available"
       }
 
-      // Add a new marker to the cluster group and bind a pop-up
+      // Add a new marker to the cluster group and bind a pop-up with
+      // Name of the business and type of license
       markers.addLayer(L.marker([busiLat, busiLon])
           .bindPopup(
             "<h5>" + trade_name +

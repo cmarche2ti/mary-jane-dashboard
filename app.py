@@ -1,5 +1,5 @@
+# import dependancies
 import numpy as np
-
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
@@ -7,9 +7,9 @@ from sqlalchemy import create_engine, func
 from datetime import datetime
 import pandas as pd
 
-engine = create_engine("postgres://postgres:MomentoMori314?@localhost:5432/CO_TAX")
-
-# http://localhost:5000/static/index.html
+# initialize database
+password = 'Your Postgres Password Here' # Set up your database your local password
+engine = create_engine("postgres://postgres:{password}?@localhost:5432/CO_TAX")
 
 # Create our session (link) from Python to the DB
 session = Session(engine)
@@ -22,7 +22,7 @@ app = Flask(__name__)
 def index():
     return ''
 
-#Meant to replace 
+# Query database to pull tax data. Replaces 
 # var mj_taxes_2018 = "data/ALL_MJ_Tax_Data.csv"
 @app.route("/taxes")
 def taxes():
